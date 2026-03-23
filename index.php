@@ -52,7 +52,7 @@ $users = $stmt->fetchAll();
     <form action="store.php" method="post">
         <p>
             <label>Nome:</label><br>
-            <input type="text" name="nomecompleto" required>
+            <input type="text" name="name" required>
         </p>
 
         <p>
