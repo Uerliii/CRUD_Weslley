@@ -13,8 +13,6 @@ $pdo = Connect::getInstance();
 $stmt = $pdo->query("SELECT * FROM users ORDER BY id DESC");
 $users = $stmt->fetchAll(PDO::FETCH_ASSOC);
 
-$mensagem_sucesso = $_SESSION["login_sucesso"] ?? null;
-unset($_SESSION["login_sucesso"]);
 ?>
 
 <!DOCTYPE html>
@@ -26,21 +24,15 @@ unset($_SESSION["login_sucesso"]);
 
   <!-- CSS principal -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Space+Mono:wght@400;700&display=swap" rel="stylesheet">
-<link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Space+Mono:wght@400;700&display=swap" rel="stylesheet">
+
+    <link rel="stylesheet" href="style.css">
 </head>
 <body>
 
   <div class="container">
 
-  <?php if ($mensagem_sucesso): ?>
-  <div class="card" style="margin-bottom: 20px; border-left: 5px solid #16a34a;">
-    <p style="color: #15803d; font-weight: bold;">
-      <?= htmlspecialchars($mensagem_sucesso) ?>
-    </p>
-  </div>
-<?php endif; ?>
 
     <!-- TOPO DA PÁGINA -->
     <div class="topbar">

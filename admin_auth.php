@@ -26,10 +26,9 @@ $admin_password = "admin123";
 */
 if (strtolower($username) === $admin_user && $password === $admin_password) {
     $_SESSION["admin_logado"] = true;
-    $_SESSION["admin_user"] = "ADMIN";
-    $_SESSION["login_sucesso"] = "Login realizado com sucesso! Redirecionando...";
-    header("Location: list.php");
-    exit;
+$_SESSION["admin_user"] = "ADMIN";
+header("Location: list.php");
+exit;
 }
 
 /*
