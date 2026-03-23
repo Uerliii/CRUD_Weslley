@@ -93,7 +93,7 @@ $users = $stmt->fetchAll();
 
         <!-- CAMPO DOCUMENTO -->
         <div class="form-group">
-          <label for="document">Documento</label>
+          <label for="document">Curso</label>
           <input 
             type="text" 
             id="document" 
@@ -112,7 +112,7 @@ $users = $stmt->fetchAll();
       </form>
     </div>
 
-    <p class="footer-note">Projeto CRUD em PHP - versão com layout melhorado</p>
+    <p class="footer-note">Projeto CRUD em PHP. Uerli's Version</p>
   </div>
 
 </body>
