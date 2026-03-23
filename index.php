@@ -37,7 +37,11 @@ $users = $stmt->fetchAll();
   <title>Cadastro de Usuários</title>
 
   <!-- CSS principal do projeto -->
-  <link rel="stylesheet" href="style.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Space+Mono:wght@400;700&display=swap" rel="stylesheet">
+
+    <link rel="stylesheet" href="style.css">
 </head>
 <body>
 
@@ -46,19 +50,19 @@ $users = $stmt->fetchAll();
     <!-- TOPO DA PÁGINA -->
     <div class="topbar">
       <div>
-        <h1>Cadastro de Usuários</h1>
-        <p>Preencha o formulário abaixo para registrar um novo usuário.</p>
+        <h1>Formulário para missões de voluntariado</h1>
+        <p>Preencha o formulário abaixo para registrar seu interesse em fazer missões voluntárias.</p>
       </div>
 
       <div class="nav-actions">
         <!-- Botão para ir para a nova página da tabela -->
-        <a href="admin_login.php" class="btn btn-secondary">Ver Inscritos</a>
+        <a href="login_admin.php" class="btn btn-secondary">Ver Inscritos</a>
       </div>
     </div>
 
     <!-- CARD DO FORMULÁRIO -->
     <div class="card">
-      <h2 class="form-title">Novo Cadastro</h2>
+      <h2 class="form-title">Preencha os campos abaixo:</h2>
 
       <!--
         IMPORTANTE:
@@ -93,12 +97,12 @@ $users = $stmt->fetchAll();
 
         <!-- CAMPO DOCUMENTO -->
         <div class="form-group">
-          <label for="document">Curso</label>
+          <label for="document">Curso e Período</label>
           <input 
             type="text" 
             id="document" 
             name="document" 
-            placeholder="Digite o seu curso"
+            placeholder="Digite o seu curso e período"
             required
           >
         </div>
@@ -107,12 +111,12 @@ $users = $stmt->fetchAll();
         <button type="submit" class="btn btn-primary">Cadastrar Usuário</button>
 
         <p class="helper-text">
-          Os registros enviados ficarão disponíveis na aba "Ver Inscritos".
+          Assim que enviar aguarde que iremos contata-lo.
         </p>
       </form>
     </div>
 
-    <p class="footer-note">Projeto CRUD em PHP. Uerli's Version</p>
+    <p class="footer-note">Cadastro para saber quantos interessados em fazer missões voluntárias</p>
   </div>
 
 </body>
