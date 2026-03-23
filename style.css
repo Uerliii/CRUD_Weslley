@@ -1,7 +1,6 @@
 /* =========================
    RESET BÁSICO
 ========================= */
-
 /* 
   O seletor * seleciona TODOS os elementos da página.
   Isso serve para padronizar o comportamento inicial.
@@ -17,12 +16,9 @@
   /* Faz com que width e height incluam padding e border no cálculo total.
      Isso facilita muito o controle do tamanho dos elementos. */
 }
-
-
 /* =========================
    ESTILO GERAL
 ========================= */
-
 /* 
   Estilização geral do corpo da página.
   Tudo que estiver dentro do body herda essa base visual.
@@ -40,7 +36,6 @@ body {
   min-height: 100vh;
   /* Faz o body ter no mínimo 100% da altura da tela */
 }
-
 /* 
   Estilo geral para todos os links <a>
 */
@@ -48,12 +43,9 @@ a {
   text-decoration: none;
   /* Remove o sublinhado padrão dos links */
 }
-
-
 /* =========================
    CONTAINER PRINCIPAL
 ========================= */
-
 /* 
   Classe usada para centralizar e limitar a largura do conteúdo principal
 */
@@ -70,12 +62,9 @@ a {
     auto nas laterais = centraliza horizontalmente
   */
 }
-
-
 /* =========================
    TOPO / CABEÇALHO
 ========================= */
-
 /* 
   Área superior da página, onde ficam título e botões
 */
@@ -121,11 +110,9 @@ a {
   /* Pequeno espaço acima do parágrafo */
 }
 
-
 /* =========================
    BOTÕES DE NAVEGAÇÃO
 ========================= */
-
 /* 
   Área que agrupa os botões do topo
 */
@@ -139,7 +126,6 @@ a {
   flex-wrap: wrap;
   /* Quebra linha se não couberem */
 }
-
 /* 
   Classe base de todos os botões
 */
@@ -165,7 +151,6 @@ a {
   cursor: pointer;
   /* Mostra a “mãozinha” ao passar o mouse */
 }
-
 /* Botão principal */
 .btn-primary {
   background: #2563eb;
@@ -174,13 +159,11 @@ a {
   color: white;
   /* Texto branco */
 }
-
 /* Efeito ao passar o mouse no botão principal */
 .btn-primary:hover {
   background: #1d4ed8;
   /* Azul mais escuro no hover */
 }
-
 /* Botão secundário */
 .btn-secondary {
   background: #e2e8f0;
@@ -189,13 +172,11 @@ a {
   color: #0f172a;
   /* Texto escuro */
 }
-
 /* Hover do botão secundário */
 .btn-secondary:hover {
   background: #cbd5e1;
   /* Cinza um pouco mais escuro */
 }
-
 /* Botão de sucesso */
 .btn-success {
   background: #16a34a;
@@ -204,13 +185,11 @@ a {
   color: white;
   /* Texto branco */
 }
-
 /* Hover do botão de sucesso */
 .btn-success:hover {
   background: #15803d;
   /* Verde mais escuro */
 }
-
 /* Botão de aviso/edição */
 .btn-warning {
   background: #f59e0b;
@@ -219,13 +198,11 @@ a {
   color: white;
   /* Texto branco */
 }
-
 /* Hover do botão warning */
 .btn-warning:hover {
   background: #d97706;
   /* Tom mais escuro */
 }
-
 /* Botão de exclusão/perigo */
 .btn-danger {
   background: #dc2626;
@@ -234,18 +211,14 @@ a {
   color: white;
   /* Texto branco */
 }
-
 /* Hover do botão danger */
 .btn-danger:hover {
   background: #b91c1c;
   /* Vermelho mais escuro */
 }
-
-
 /* =========================
    CARD
 ========================= */
-
 /* 
   Caixa branca usada para envolver formulário, tabela, etc.
 */
@@ -265,12 +238,9 @@ a {
   margin-bottom: 25px;
   /* Espaço abaixo do card */
 }
-
-
 /* =========================
    FORMULÁRIO
 ========================= */
-
 /* 
   Título das áreas de formulário
 */
@@ -284,7 +254,6 @@ a {
   color: #0f172a;
   /* Cor escura */
 }
-
 /* 
   Cada grupo de campo (label + input)
 */
@@ -292,7 +261,6 @@ a {
   margin-bottom: 18px;
   /* Espaço entre um campo e outro */
 }
-
 /* 
   Label dos campos
 */
@@ -309,8 +277,7 @@ a {
   color: #334155;
   /* Cor intermediária */
 }
-
-/* 
+/*
   Input dos formulários
 */
 .form-group input {
@@ -335,7 +302,6 @@ a {
   font-size: 1rem;
   /* Tamanho padrão do texto */
 }
-
 /* 
   Estilo do input quando recebe foco
 */
@@ -346,12 +312,9 @@ a {
   box-shadow: 0 0 0 4px rgba(37, 99, 235, 0.12);
   /* Cria uma aura azul ao redor para destacar */
 }
-
-
 /* =========================
    MENSAGEM DE APOIO
 ========================= */
-
 /* 
   Texto auxiliar abaixo do formulário
 */
@@ -365,12 +328,9 @@ a {
   font-size: 0.95rem;
   /* Levemente menor que o normal */
 }
-
-
 /* =========================
    TABELA
 ========================= */
-
 /* 
   Wrapper da tabela para evitar quebrar layout em telas pequenas
 */
@@ -381,32 +341,26 @@ a {
     em vez de estourar a página
   */
 }
-
 /* 
   Estilo geral da tabela
 */
 table {
   width: 100%;
   /* Tabela ocupa toda a largura */
-
   border-collapse: collapse;
   /* Remove espaços entre as bordas das células */
-
   min-width: 700px;
   /* Garante largura mínima para a tabela */
 }
-
 /* 
   Cabeçalho da tabela
 */
 table thead {
   background: #2563eb;
   /* Fundo azul */
-
   color: white;
   /* Texto branco */
 }
-
 /* 
   Células do cabeçalho e do corpo
 */
@@ -414,11 +368,9 @@ table th,
 table td {
   padding: 14px 12px;
   /* Espaçamento interno das células */
-
   text-align: left;
   /* Alinha texto à esquerda */
 }
-
 /* 
   Cada linha do corpo da tabela
 */
@@ -429,7 +381,6 @@ table tbody tr {
   transition: 0.2s ease;
   /* Animação suave no hover */
 }
-
 /* 
   Efeito ao passar o mouse em uma linha
 */
@@ -437,8 +388,6 @@ table tbody tr:hover {
   background: #f8fafc;
   /* Destaca levemente a linha */
 }
-
-
 /* =========================
    AÇÕES DA TABELA
 ========================= */
@@ -449,60 +398,44 @@ table tbody tr:hover {
 .actions {
   display: flex;
   /* Botões ficam lado a lado */
-
   gap: 8px;
   /* Espaço entre eles */
-
   flex-wrap: wrap;
   /* Quebra linha se faltar espaço */
 }
-
-
 /* =========================
    ESTADO VAZIO
 ========================= */
-
 /* 
   Mensagem exibida quando não houver registros na tabela
 */
 .empty-state {
   text-align: center;
   /* Centraliza o texto */
-
   padding: 30px;
   /* Espaço interno */
-
   color: #64748b;
   /* Cor suave */
 }
-
-
 /* =========================
    RODAPÉ
 ========================= */
-
 /* 
   Texto pequeno no final da página
 */
 .footer-note {
   text-align: center;
   /* Centraliza */
-
   color: #64748b;
   /* Cor discreta */
-
   font-size: 0.9rem;
   /* Texto menor */
-
   margin-top: 20px;
   /* Espaço acima do rodapé */
 }
-
-
 /* =========================
    RESPONSIVIDADE
 ========================= */
-
 /* 
   Regras aplicadas apenas em telas de até 768px,
   como tablets e celulares

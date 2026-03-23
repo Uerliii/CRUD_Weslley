@@ -52,7 +52,7 @@ $users = $stmt->fetchAll();
 
       <div class="nav-actions">
         <!-- Botão para ir para a nova página da tabela -->
-        <a href="list.php" class="btn btn-secondary">Ver Inscritos</a>
+        <a href="admin_login.php" class="btn btn-secondary">Ver Inscritos</a>
       </div>
     </div>
 
@@ -74,7 +74,7 @@ $users = $stmt->fetchAll();
             type="text" 
             id="name" 
             name="name" 
-            placeholder="Digite o nome completo"
+            placeholder="Digite o seu nome completo"
             required
           >
         </div>
@@ -86,7 +86,7 @@ $users = $stmt->fetchAll();
             type="email" 
             id="email" 
             name="email" 
-            placeholder="Digite o e-mail"
+            placeholder="Digite o seu e-mail"
             required
           >
         </div>
@@ -98,7 +98,7 @@ $users = $stmt->fetchAll();
             type="text" 
             id="document" 
             name="document" 
-            placeholder="Digite o documento"
+            placeholder="Digite o seu curso"
             required
           >
         </div>

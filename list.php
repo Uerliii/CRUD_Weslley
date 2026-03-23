@@ -1,20 +1,20 @@
 <?php
+session_start();
+
+if (!isset($_SESSION["admin_logado"]) || $_SESSION["admin_logado"] !== true) {
+    header("Location: login_admin.php");
+    exit;
+}
+
 require __DIR__ . "/connect.php";
 
-/*
-|--------------------------------------------------------------------------
-| Obtém a conexão PDO pela classe Connect
-|--------------------------------------------------------------------------
-*/
 $pdo = Connect::getInstance();
 
-/*
-|--------------------------------------------------------------------------
-| Busca os usuários cadastrados
-|--------------------------------------------------------------------------
-*/
 $stmt = $pdo->query("SELECT * FROM users ORDER BY id DESC");
 $users = $stmt->fetchAll(PDO::FETCH_ASSOC);
+
+$mensagem_sucesso = $_SESSION["login_sucesso"] ?? null;
+unset($_SESSION["login_sucesso"]);
 ?>
 
 <!DOCTYPE html>
@@ -31,6 +31,14 @@ $users = $stmt->fetchAll(PDO::FETCH_ASSOC);
 
   <div class="container">
 
+  <?php if ($mensagem_sucesso): ?>
+  <div class="card" style="margin-bottom: 20px; border-left: 5px solid #16a34a;">
+    <p style="color: #15803d; font-weight: bold;">
+      <?= htmlspecialchars($mensagem_sucesso) ?>
+    </p>
+  </div>
+<?php endif; ?>
+
     <!-- TOPO DA PÁGINA -->
     <div class="topbar">
       <div>
@@ -39,8 +47,8 @@ $users = $stmt->fetchAll(PDO::FETCH_ASSOC);
       </div>
 
       <div class="nav-actions">
-        <!-- Voltar para a tela de cadastro -->
         <a href="index.php" class="btn btn-secondary">Voltar ao Cadastro</a>
+        <a href="logout.php" class="btn btn-danger">Sair</a>
       </div>
     </div>
 
