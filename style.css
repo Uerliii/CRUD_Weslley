@@ -1,251 +1,529 @@
 /* =========================
    RESET BÁSICO
 ========================= */
+
+/* 
+  O seletor * seleciona TODOS os elementos da página.
+  Isso serve para padronizar o comportamento inicial.
+*/
 * {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
+  margin: 0; 
+  /* Remove as margens padrão que o navegador coloca nos elementos */
+
+  padding: 0; 
+  /* Remove os espaçamentos internos padrão */
+
+  box-sizing: border-box; 
+  /* Faz com que width e height incluam padding e border no cálculo total.
+     Isso facilita muito o controle do tamanho dos elementos. */
 }
+
 
 /* =========================
    ESTILO GERAL
 ========================= */
+
+/* 
+  Estilização geral do corpo da página.
+  Tudo que estiver dentro do body herda essa base visual.
+*/
 body {
   font-family: Arial, Helvetica, sans-serif;
+  /* Define a fonte principal do site */
+
   background: linear-gradient(135deg, #eef2ff, #f8fafc);
+  /* Cria um fundo com degradê em diagonal */
+
   color: #1e293b;
+  /* Define a cor padrão dos textos */
+
   min-height: 100vh;
+  /* Faz o body ter no mínimo 100% da altura da tela */
 }
 
+/* 
+  Estilo geral para todos os links <a>
+*/
 a {
   text-decoration: none;
+  /* Remove o sublinhado padrão dos links */
 }
+
 
 /* =========================
    CONTAINER PRINCIPAL
 ========================= */
+
+/* 
+  Classe usada para centralizar e limitar a largura do conteúdo principal
+*/
 .container {
   width: 90%;
+  /* O container ocupa 90% da largura disponível da tela */
+
   max-width: 1100px;
+  /* Mas nunca passa de 1100px, mesmo em telas grandes */
+
   margin: 40px auto;
+  /* 
+    40px em cima e embaixo
+    auto nas laterais = centraliza horizontalmente
+  */
 }
+
 
 /* =========================
    TOPO / CABEÇALHO
 ========================= */
+
+/* 
+  Área superior da página, onde ficam título e botões
+*/
 .topbar {
   display: flex;
+  /* Coloca os elementos lado a lado */
+
   justify-content: space-between;
+  /* Joga um bloco para a esquerda e outro para a direita */
+
   align-items: center;
+  /* Alinha os itens verticalmente no centro */
+
   gap: 15px;
+  /* Dá espaço entre os itens internos */
+
   margin-bottom: 30px;
+  /* Afasta o topo do conteúdo de baixo */
+
   flex-wrap: wrap;
+  /* Permite quebrar linha em telas menores */
 }
 
+/* 
+  Estilo do título principal dentro da topbar
+*/
 .topbar h1 {
   font-size: 2rem;
+  /* Define tamanho maior para o título */
+
   color: #0f172a;
+  /* Cor mais escura para dar destaque */
 }
 
+/* 
+  Estilo do parágrafo/subtítulo da topbar
+*/
 .topbar p {
   color: #475569;
+  /* Cor mais suave para texto secundário */
+
   margin-top: 5px;
+  /* Pequeno espaço acima do parágrafo */
 }
+
 
 /* =========================
    BOTÕES DE NAVEGAÇÃO
 ========================= */
+
+/* 
+  Área que agrupa os botões do topo
+*/
 .nav-actions {
   display: flex;
+  /* Deixa os botões lado a lado */
+
   gap: 10px;
+  /* Espaço entre os botões */
+
   flex-wrap: wrap;
+  /* Quebra linha se não couberem */
 }
 
+/* 
+  Classe base de todos os botões
+*/
 .btn {
   display: inline-block;
+  /* Permite tratar link como botão e respeitar padding */
+
   padding: 12px 18px;
+  /* Espaçamento interno do botão */
+
   border-radius: 10px;
+  /* Arredonda os cantos */
+
   font-weight: bold;
+  /* Texto em negrito */
+
   transition: 0.2s ease;
+  /* Suaviza mudanças visuais, como hover */
+
   border: none;
+  /* Remove borda padrão */
+
   cursor: pointer;
+  /* Mostra a “mãozinha” ao passar o mouse */
 }
 
+/* Botão principal */
 .btn-primary {
   background: #2563eb;
+  /* Fundo azul */
+
   color: white;
+  /* Texto branco */
 }
 
+/* Efeito ao passar o mouse no botão principal */
 .btn-primary:hover {
   background: #1d4ed8;
+  /* Azul mais escuro no hover */
 }
 
+/* Botão secundário */
 .btn-secondary {
   background: #e2e8f0;
+  /* Fundo cinza claro */
+
   color: #0f172a;
+  /* Texto escuro */
 }
 
+/* Hover do botão secundário */
 .btn-secondary:hover {
   background: #cbd5e1;
+  /* Cinza um pouco mais escuro */
 }
 
+/* Botão de sucesso */
 .btn-success {
   background: #16a34a;
+  /* Verde */
+
   color: white;
+  /* Texto branco */
 }
 
+/* Hover do botão de sucesso */
 .btn-success:hover {
   background: #15803d;
+  /* Verde mais escuro */
 }
 
+/* Botão de aviso/edição */
 .btn-warning {
   background: #f59e0b;
+  /* Laranja/amarelo */
+
   color: white;
+  /* Texto branco */
 }
 
+/* Hover do botão warning */
 .btn-warning:hover {
   background: #d97706;
+  /* Tom mais escuro */
 }
 
+/* Botão de exclusão/perigo */
 .btn-danger {
   background: #dc2626;
+  /* Vermelho */
+
   color: white;
+  /* Texto branco */
 }
 
+/* Hover do botão danger */
 .btn-danger:hover {
   background: #b91c1c;
+  /* Vermelho mais escuro */
 }
+
 
 /* =========================
    CARD
 ========================= */
+
+/* 
+  Caixa branca usada para envolver formulário, tabela, etc.
+*/
 .card {
   background: white;
+  /* Fundo branco */
+
   border-radius: 18px;
+  /* Cantos arredondados */
+
   padding: 25px;
+  /* Espaçamento interno */
+
   box-shadow: 0 10px 30px rgba(15, 23, 42, 0.08);
+  /* Sombra suave para dar profundidade */
+
   margin-bottom: 25px;
+  /* Espaço abaixo do card */
 }
+
 
 /* =========================
    FORMULÁRIO
 ========================= */
+
+/* 
+  Título das áreas de formulário
+*/
 .form-title {
   margin-bottom: 20px;
+  /* Distância entre o título e o formulário */
+
   font-size: 1.3rem;
+  /* Tamanho de destaque */
+
   color: #0f172a;
+  /* Cor escura */
 }
 
+/* 
+  Cada grupo de campo (label + input)
+*/
 .form-group {
   margin-bottom: 18px;
+  /* Espaço entre um campo e outro */
 }
 
+/* 
+  Label dos campos
+*/
 .form-group label {
   display: block;
+  /* Faz a label ocupar uma linha inteira */
+
   margin-bottom: 8px;
+  /* Espaço entre label e input */
+
   font-weight: bold;
+  /* Texto em negrito */
+
   color: #334155;
+  /* Cor intermediária */
 }
 
+/* 
+  Input dos formulários
+*/
 .form-group input {
   width: 100%;
+  /* Input ocupa toda a largura disponível */
+
   padding: 13px 14px;
+  /* Espaçamento interno */
+
   border: 1px solid #cbd5e1;
+  /* Borda cinza clara */
+
   border-radius: 10px;
+  /* Cantos arredondados */
+
   outline: none;
+  /* Remove o contorno padrão do navegador ao focar */
+
   transition: 0.2s ease;
+  /* Transição suave nas mudanças */
+
   font-size: 1rem;
+  /* Tamanho padrão do texto */
 }
 
+/* 
+  Estilo do input quando recebe foco
+*/
 .form-group input:focus {
   border-color: #2563eb;
+  /* Borda fica azul */
+
   box-shadow: 0 0 0 4px rgba(37, 99, 235, 0.12);
+  /* Cria uma aura azul ao redor para destacar */
 }
+
 
 /* =========================
    MENSAGEM DE APOIO
 ========================= */
+
+/* 
+  Texto auxiliar abaixo do formulário
+*/
 .helper-text {
   margin-top: 10px;
+  /* Espaço acima do texto */
+
   color: #64748b;
+  /* Cor mais suave */
+
   font-size: 0.95rem;
+  /* Levemente menor que o normal */
 }
+
 
 /* =========================
    TABELA
 ========================= */
+
+/* 
+  Wrapper da tabela para evitar quebrar layout em telas pequenas
+*/
 .table-wrapper {
   overflow-x: auto;
+  /* 
+    Se a tabela ficar muito larga, aparece rolagem horizontal
+    em vez de estourar a página
+  */
 }
 
+/* 
+  Estilo geral da tabela
+*/
 table {
   width: 100%;
+  /* Tabela ocupa toda a largura */
+
   border-collapse: collapse;
+  /* Remove espaços entre as bordas das células */
+
   min-width: 700px;
+  /* Garante largura mínima para a tabela */
 }
 
+/* 
+  Cabeçalho da tabela
+*/
 table thead {
   background: #2563eb;
+  /* Fundo azul */
+
   color: white;
+  /* Texto branco */
 }
 
+/* 
+  Células do cabeçalho e do corpo
+*/
 table th,
 table td {
   padding: 14px 12px;
+  /* Espaçamento interno das células */
+
   text-align: left;
+  /* Alinha texto à esquerda */
 }
 
+/* 
+  Cada linha do corpo da tabela
+*/
 table tbody tr {
   border-bottom: 1px solid #e2e8f0;
+  /* Linha separando registros */
+
   transition: 0.2s ease;
+  /* Animação suave no hover */
 }
 
+/* 
+  Efeito ao passar o mouse em uma linha
+*/
 table tbody tr:hover {
   background: #f8fafc;
+  /* Destaca levemente a linha */
 }
+
 
 /* =========================
    AÇÕES DA TABELA
 ========================= */
+
+/* 
+  Área onde ficam os botões de editar/excluir
+*/
 .actions {
   display: flex;
+  /* Botões ficam lado a lado */
+
   gap: 8px;
+  /* Espaço entre eles */
+
   flex-wrap: wrap;
+  /* Quebra linha se faltar espaço */
 }
+
 
 /* =========================
    ESTADO VAZIO
 ========================= */
+
+/* 
+  Mensagem exibida quando não houver registros na tabela
+*/
 .empty-state {
   text-align: center;
+  /* Centraliza o texto */
+
   padding: 30px;
+  /* Espaço interno */
+
   color: #64748b;
+  /* Cor suave */
 }
+
 
 /* =========================
    RODAPÉ
 ========================= */
+
+/* 
+  Texto pequeno no final da página
+*/
 .footer-note {
   text-align: center;
+  /* Centraliza */
+
   color: #64748b;
+  /* Cor discreta */
+
   font-size: 0.9rem;
+  /* Texto menor */
+
   margin-top: 20px;
+  /* Espaço acima do rodapé */
 }
+
 
 /* =========================
    RESPONSIVIDADE
 ========================= */
+
+/* 
+  Regras aplicadas apenas em telas de até 768px,
+  como tablets e celulares
+*/
 @media (max-width: 768px) {
+
   .topbar {
     flex-direction: column;
+    /* Em vez de lado a lado, os itens ficam um embaixo do outro */
+
     align-items: flex-start;
+    /* Alinha tudo à esquerda */
   }
 
   .topbar h1 {
     font-size: 1.6rem;
+    /* Diminui o título para caber melhor em telas pequenas */
   }
 
   .card {
     padding: 18px;
+    /* Reduz o padding do card para aproveitar espaço */
   }
 }
